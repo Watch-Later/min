@@ -1,0 +1,126 @@
+test() {
+	// values
+	'a'
+	'\x20'
+	'\u33'
+	101
+	0x101
+	.101
+	".101 "
+	'.101 '
+
+	// assignments
+	a =     100
+	a
+
+	// f-interpolated strings
+	a=100
+	b=101
+	f"{a} is 100"
+	f"{a} is {a}"
+	f"{a} is not {b}"
+	name1="John"
+	name2="Doe"
+	f"Hello {name1}{name2}"
+
+	// conditions
+	1 < 2
+	2 > 1
+	1 == 1
+	1 != 0
+	a <= 100
+	a == 100
+	a >= 100
+	a < 100
+	a > 100
+	b = 100
+	a == b
+	a != b
+	c = 101
+	a == c
+	a != c
+
+	// operators
+	1+2
+	3-1
+	2*3
+	2**3
+	8/2
+	9%2
+	100|2
+	102&100
+	!102
+	!0
+	1^1
+	0^1
+	~0
+	~100
+	a=100
+	a+=2
+	a-=2
+	a*=2
+	a/=2
+	a%=5
+
+	// branches [missing: ternary]
+	if(1<2)100
+	if(1>2)200
+	if(1<2)100 else 200
+	if(1>2)100 else 200
+
+	// pre/post inc/decrements
+	a=100
+	--a
+	--a
+	++a
+	++a
+	a--
+	a
+	a++
+	a
+
+	// loops [missing: for]
+	a = 3
+	while(a--) a
+	a = 3
+	while(a<10) ++a
+	a = 3
+	do { a++ } while(a!=10)
+	a = 3
+	do { --a } while(a)
+
+	// functional operators
+	len
+	len(true)
+	len('\x20')
+	len(3)
+	len(3.0)
+	len("hello world")
+	hash
+	hash("")
+	hash("hello world")
+	hash("hello wor1d")
+
+	// hooked functions
+	say
+	say(1,2,"3")
+
+	// external C functions
+	puts
+	puts("hello world")
+	sin
+	sin(1.571)
+	cos
+	cos(1.571)
+
+	// functions [missing]
+	nested(n) {
+		say(n)
+	}
+	nested(123)
+	nested("hello")
+	fib(n) {
+		return n < 2 ? n : fib(n-1) + fib(n-2)
+	}
+	puts(fib(10))
+}
